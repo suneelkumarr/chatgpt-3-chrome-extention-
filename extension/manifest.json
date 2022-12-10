@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Ask ChatGPT",
+    "version": "1.0.0",
+    "permissions": [
+        "contextMenus",
+        "tabs"
+    ],
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
